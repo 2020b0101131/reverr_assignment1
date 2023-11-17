@@ -43,13 +43,12 @@ const Counter = ({ label, startValue }) => {
 
   return (
     <div className='container border'>
-         <h3 className='col-md-4'>{counterLabel}</h3>
-         <p className='badge bg-secondary text-wrap w-100'>Value: {value}</p>
-         <div className='row'>
-         <button className='col' onClick={increase}>Increase</button>
-         <button className='col'onClick={decrease}>Decrease</button>
-         <button onClick={reset}>Reset</button>
-         
+         <h3 className='text-center'>{counterLabel}</h3>
+         <p className='badge bg-secondary text-wrap w-100 h-25 fs-1'>Value: {value}</p>
+         <div className=''>
+         <button className='col w-50' onClick={increase}>Increase</button>
+         <button className='col w-50'onClick={decrease}>Decrease</button>
+         <div className=''>
       {/* ////////////////////////////////////////////////////////////////////////// */}
       {isEditingStartValue ? (
         <input
@@ -60,9 +59,12 @@ const Counter = ({ label, startValue }) => {
           autoFocus
         />
       ) : (
-        <button onClick={handleStartValueClick}>Start Value: {startVal}</button>
+        <button className='col w-75 border-end-0'onClick={handleStartValueClick}>Start Value: {startVal}</button>
       )}
+      <button className='col w-25' onClick={reset}>Reset</button>
+      </div>
      {/* //////////////////////////////////////////////////////////////////////////// */}
+     
      {isEditingLabel ? (
         <input
           type="text"
@@ -73,8 +75,9 @@ const Counter = ({ label, startValue }) => {
         />
       ) : (
         
-        <button onClick={handleLabelClick}>Reset Counter Name</button>
+        <button className='col w-100 mb-3'onClick={handleLabelClick}>Reset Counter Name</button>
       )}
+     
       </div>
     </div>
   );

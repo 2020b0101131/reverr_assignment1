@@ -4,9 +4,9 @@ import CounterList from './components/CounterList';
 
 function App() {
   return (
-    <div className="container">
+    <div className="container ">
       <div>
-      <h1>Counting App</h1>
+      <h1 className='text-center'>Tally Counter</h1>
       <CounterList />
     </div>
     </div>
