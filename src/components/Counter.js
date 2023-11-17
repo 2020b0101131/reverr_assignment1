@@ -51,7 +51,7 @@ const Counter = ({ label, startValue }) => {
          <div className=''>
       {/* ////////////////////////////////////////////////////////////////////////// */}
       {isEditingStartValue ? (
-        <input
+        <input className='w-75'
           type="number"
           value={startVal}
           onChange={handleStartValueChange}
@@ -66,7 +66,7 @@ const Counter = ({ label, startValue }) => {
      {/* //////////////////////////////////////////////////////////////////////////// */}
      
      {isEditingLabel ? (
-        <input
+        <input className='w-100'
           type="text"
           value={counterLabel}
           onChange={handleLabelChange}
